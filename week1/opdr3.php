@@ -19,10 +19,18 @@ $albums = array(
 				)
 
 		);
-
 ?>
+<!doctype html>
+<html>
+<head>
+<style> 
+tr:nth-child(odd) {background: #FFF}
+tr:nth-child(even) {background: #CCC}
+</style>
+</head>
 
-<table>
+<body>
+<table border="1">
   <thead>
     <tr>
       <th><?php echo implode('</th><th>', array_keys(current($albums))); ?></th>
