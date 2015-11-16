@@ -82,11 +82,6 @@ $albums = array(
 				'tracks' 		=> 5,
 				'genre' 		=> 'pop'
 				)
-
-
-
-
-
 		);
 ?>
 <!doctype html>
