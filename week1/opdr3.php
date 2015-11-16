@@ -29,6 +29,7 @@ $albums = array(
     </tr>
   </thead>
   <tbody>
+
 <?php foreach ($albums as $row): array_map('htmlentities', $row); ?>
     <tr>
       <td><?php echo implode('</td><td>', $row); ?></td>
