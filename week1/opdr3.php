@@ -20,14 +20,19 @@ $albums = array(
 
 		);
 
-//$data  = json_decode($albums);
-print_r($albums);
+?>
 
-foreach ($albums as $object) {
-	# code...
-	echo '<tr>';
-	echo '<td>.'$object->{'id'}'</td>';
-	echo "<td>$data->";
-	echo "</tr>";
-};
-echo "</table>";
+<table>
+  <thead>
+    <tr>
+      <th><?php echo implode('</th><th>', array_keys(current($albums))); ?></th>
+    </tr>
+  </thead>
+  <tbody>
+<?php foreach ($albums as $row): array_map('htmlentities', $row); ?>
+    <tr>
+      <td><?php echo implode('</td><td>', $row); ?></td>
+    </tr>
+<?php endforeach; ?>
+  </tbody>
+</table>
