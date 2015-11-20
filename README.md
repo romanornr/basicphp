@@ -1,1 +1,3 @@
 # basicphp
+Voel je vrij om naar mijn code te kijken als je niet uitkomt met de opdrachten...
+Maar met kopiëren & plakken kom je niet ver. 
