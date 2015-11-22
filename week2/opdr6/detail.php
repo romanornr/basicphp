@@ -83,11 +83,52 @@ $albums = array(
 				'genre' 		=> 'pop'
 				)
 		);
-foreach($albums as $row);
 
-$albumid = $_GET['id'];
-var_dump(array_filter($row, function($albumid) {
-    return $albumid;
-}, ARRAY_FILTER_USE_KEY));
 
+
+foreach($albums as $album) {
+		if ($album['id'] == $albumid) {
+		break;
+	}
+}
+
+// var_dump(array_filter($albums, function($albumid) {
+//     return $albumid;
+// }, ARRAY_FILTER_USE_KEY));
 ?>
+<style>
+body {
+  font: normal medium/1.4 sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 0.25rem;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+col:nth-child(3) {
+  background: yellow; 
+}
+</style>
+<body>
+<table border="1">
+  <thead>
+    <tr>
+      <th><?php echo implode('</th><th>', array_keys(current($albums))); ?></th>
+    </tr>
+  </thead>
+
+   <?php foreach($album as $data): ?>
+    <td><?= $data ?></td>
+   <?php endforeach; ?>
+  </tr>
+
+ </table>
+</body>
+	
+
+
+
