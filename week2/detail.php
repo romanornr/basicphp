@@ -1,4 +1,5 @@
 <?php
+$albumid = $_GET['id'];
 $albums = array(
 			array(
 				'id' 			=> 1,
@@ -82,8 +83,11 @@ $albums = array(
 				'genre' 		=> 'pop'
 				)
 		);
-
+foreach($albums as $row);
 
 $albumid = $_GET['id'];
-$albumname = $_GET['album_name'];
+var_dump(array_filter($row, function($albumid) {
+    return $albumid;
+}, ARRAY_FILTER_USE_KEY));
+
 ?>
