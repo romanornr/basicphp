@@ -19,16 +19,6 @@
     <input type="artist" class="form-control" id="artist" required>
   </div>
 
-  <div class="form-group">
-    <label for="artist">artist:</label>
-    <input type="artist" class="form-control" id="artist" required>
-  </div>
-
-    <div class="form-group">
-    <label for="artist">artist:</label>
-    <input type="artist" class="form-control" id="artist" required>
-  </div>
-
       <div class="form-group">
     <label for="year">year_release:</label>
     <input type="year" class="form-control" id="year" required>
