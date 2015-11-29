@@ -94,13 +94,10 @@ foreach($albums as $album) {
 
 
 if (isset($_POST['submit'])){
-	foreach($albums as $album) {
-	if ($album['id'] == $album['id']){
-		$data = $albums;
+	if ($album['id'] == $albumid) {
+		echo 'hallo';
 		}
-
 	}
-}
 
 ?>
 <!doctype html>
@@ -122,7 +119,7 @@ if (isset($_POST['submit'])){
    <?php endforeach; ?>
    <br>
        <div class="form-actions">
-            <button type="submit" class="btn btn-success">Edit</button>
+            <button type="submit" name="submit" class="btn btn-success">Edit</button>
        </div>
    </form>
 </body>
