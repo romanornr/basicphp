@@ -93,11 +93,7 @@ foreach($albums as $album) {
 }
 
 
-if (isset($_POST['submit'])){
-	if ($album['id'] == $albumid) {
-		echo 'hallo';
-		}
-	}
+
 
 ?>
 <!doctype html>
@@ -113,7 +109,7 @@ if (isset($_POST['submit'])){
    <?php foreach($album as $data): ?>
    	<label class="control-label"></label>
    	<div class="controls">
-   <input name="<?= $data ?>" type="text"  placeholder="Name" value="<?php echo !empty($data)?$data:'';?>">
+   <input name="<?= $data ?>" type="text" placeholder="Name" value="<?php echo !empty($data)?$data:'';?>">
    <br>
    </div>
    <?php endforeach; ?>
