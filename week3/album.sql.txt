@@ -1,0 +1,76 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Gegenereerd op: 30 nov 2015 om 01:21
+-- Serverversie: 5.6.26
+-- PHP-versie: 5.6.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `albums`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `album`
+--
+
+CREATE TABLE IF NOT EXISTS `album` (
+  `id` int(11) NOT NULL,
+  `naam` varchar(60) NOT NULL,
+  `artist` varchar(60) NOT NULL,
+  `year` varchar(60) NOT NULL,
+  `tracks` int(4) NOT NULL,
+  `genre` varchar(60) NOT NULL,
+  `image` varchar(60) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `album`
+--
+
+INSERT INTO `album` (`id`, `naam`, `artist`, `year`, `tracks`, `genre`, `image`) VALUES
+(1, 'Merry Christmas', 'Mariah Carey', '1994', 2, 'Christmas', 'images/Merry_Christmas.png'),
+(2, 'Traveller', 'Chris Stapleton', '2015', 5, 'pop', 'images/Traveller.jpg'),
+(3, 'Molly', 'Tyga', '2013', 6, 'hip hop', 'images/Molly.png'),
+(4, 'We Love Disney', 'Various Artist', '2015', 12, 'pop', 'images/We_Love_Disney.jpg'),
+(5, '1989', 'Taylor Swift', '2015', 13, 'pop', 'images/1989.png'),
+(6, 'Revival', 'Selena Gomez', '2015', 8, 'pop', 'images/Revival.png'),
+(7, '21', 'Adele', '2015', 8, 'pop', 'images/21.png'),
+(8, 'Confident', 'Demi Lovato', '2015', 14, 'pop', 'images/Confident.jpg'),
+(9, 'Buy Me A Boat', 'Adele', '2015', 8, 'pop', 'images/Buy_Me_A_Boat.jpg'),
+(10, 'Nothing was the Same', 'Drake', '2015', 5, 'pop', 'images/Nothing_was_the_Same.jpg');
+
+--
+-- Indexen voor geëxporteerde tabellen
+--
+
+--
+-- Indexen voor tabel `album`
+--
+ALTER TABLE `album`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT voor geëxporteerde tabellen
+--
+
+--
+-- AUTO_INCREMENT voor een tabel `album`
+--
+ALTER TABLE `album`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
