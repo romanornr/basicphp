@@ -15,7 +15,6 @@
             	$id = $_GET['id'];
             	include 'db.php';
             	$pdo = Database::connect();
-            	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             	$sql = 'SELECT * FROM album WHERE id = ?';
             	$q = $pdo->prepare($sql);
             	$q->execute(array($id));
