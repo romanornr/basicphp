@@ -22,7 +22,9 @@
                             echo 'Album Release year: '. $row['year'] . '</br>';
                             echo 'Amount of tracks: '. $row['tracks'] . '</br>';
                             echo 'genre: '. $row['genre'] . '</br>';
-                            echo '</div></div></div>';
+                            echo '</div></div></div></a>';
+                            echo '<p><a href="delete.php?id='. $row['id'].'"class="btn btn-danger" role="button">Delete</a> 
+                            </p>';
                    }
                    Database::disconnect();
                   ?>
