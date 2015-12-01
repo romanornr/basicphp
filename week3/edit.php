@@ -16,7 +16,7 @@
                    $sql = 'SELECT * FROM album ORDER BY id DESC';
                    foreach ($pdo->query($sql) as $row) {
                             echo '<div class="row"><div class="col-sm-6 col-md-4"><div class="thumbnail">';
-                            echo '<a href="details.php?id='. $row['id'].'"><img src="'. $row['image'] . '">';
+                            echo '<img src="'. $row['image'] . '">';
                             echo '<h3>'. $row['naam'] .'</h3>
                             <p> By: '. $row['artist'] . '<br>';
                             echo 'Album Release year: '. $row['year'] . '</br>';
