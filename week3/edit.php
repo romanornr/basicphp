@@ -1,3 +1,13 @@
+<?php
+            	$id = $_GET['id'];
+            	include 'db.php';
+            	$pdo = Database::connect();
+            	$sql = 'SELECT * FROM album WHERE id = ?';
+            	$q = $pdo->prepare($sql);
+            	$q->execute(array($id));
+            	$data = $q->fetch(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,28 +17,39 @@
  
 <body>
     <div class="container">
-            <div class="row">
-                <h3>Albums</h3>
-            </div>
-                  <?php
-                   include 'db.php';
-                   $pdo = Database::connect();
-                   $sql = 'SELECT * FROM album ORDER BY id DESC';
-                   foreach ($pdo->query($sql) as $row) {
-                            echo '<div class="row"><div class="col-sm-6 col-md-4"><div class="thumbnail">';
-                            echo '<img src="'. $row['image'] . '">';
-                            echo '<h3>'. $row['naam'] .'</h3>
-                            <p> By: '. $row['artist'] . '<br>';
-                            echo 'Album Release year: '. $row['year'] . '</br>';
-                            echo 'Amount of tracks: '. $row['tracks'] . '</br>';
-                            echo 'genre: '. $row['genre'] . '</br>';
-                            echo '</div></div></div>';
-                   }
-                   Database::disconnect();
-                  ?>
-                  </tbody>
-            </table>
-        </div>
-    </div> <!-- /container -->
+     
+                <div class="span10 offset1">
+                    <div class="row">
+                        <h3>Update a Customer</h3>
+                    </div>
+             
+                    <form class="form-horizontal" action="update.php?id=<?php echo $id ?>" method="post">
+
+                      <div class="control-group <?php echo !empty($naamError)?'error':'';?>">
+                        <label class="control-label">Naam</label>
+                        <div class="controls">
+                            <input name="naam" type="text"  placeholder="Naam" value="<?php echo $data['naam']?>">
+                        </div>
+                      </div>
+
+                      <div class="control-group <?php echo !empty($artistError)?'error':'';?>">
+                        <label class="control-label">Arist</label>
+                        <div class="controls">
+                            <input name="artist" type="text" placeholder="artist" value="<?php echo $data['artist']?>">
+                        </div>
+                      </div>
+                      <div class="control-group <?php echo !empty($yearError)?'error':'';?>">
+                        <label class="control-label">Year</label>
+                        <div class="controls">
+                            <input name="year" type="text"  placeholder="year" value="<?php echo $data['year']?>">
+                        </div>
+                      </div>
+                      <div class="form-actions">
+                          <button type="submit" class="btn btn-success">Update</button>
+                          <a class="btn" href="index.php">Back</a>
+                        </div>
+                    </form>
+                </div>         
+    </div>
   </body>
 </html>

@@ -25,6 +25,8 @@
                             echo '</div></div></div></a>';
                             echo '<p><a href="delete.php?id='. $row['id'].'"class="btn btn-danger" role="button">Delete</a> 
                             </p>';
+                            echo '<p><a href="edit.php?id='. $row['id'].'"class="btn btn-warning" role="button">update</a> 
+                            </p>';
                    }
                    Database::disconnect();
                   ?>
