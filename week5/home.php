@@ -15,3 +15,4 @@ if(!$user->is_loggedin())
 <body>
 <title>welcome</title>
 <p><a href="create.php">Hier is de beveiligde create pagina</a></p>
+<a href="logout.php?logout=true">Logout</a>
