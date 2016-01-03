@@ -10,11 +10,8 @@ if (isset($_POST['submit']))
 if($user->login($username,$email,$password))
  {
     $user->redirect('home.php');
-    }else{
-    echo $error = "Wrong Details !";
   }
-
-
+    echo $error = "Wrong Details !";
 }
 
 ?>
